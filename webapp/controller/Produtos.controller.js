@@ -5,6 +5,8 @@ sap.ui.define([
 
     return Controller.extend("br.com.northwind.fioriappnorthwind.controller.Produtos", {
         onInit() {
+            let oConfiguration = sap.ui.getCore().getConfiguration();
+            oConfiguration.setLanguage("PT");
         }
     });
 });
