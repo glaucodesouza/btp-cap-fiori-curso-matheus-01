@@ -90,10 +90,10 @@
       },
       "routes": [
         {
-          "name": "RouteView1",
+          "name": "RouteProdutos",
           "pattern": ":?query:",
           "target": [
-            "TargetView1"
+            "TargetProdutos"
           ]
         }
       ],
@@ -101,13 +101,17 @@
         "TargetView1": {
           "id": "View1",
           "name": "View1"
+        },
+        "TargetProdutos": {
+          "id": "Produtos",
+          "name": "Produtos"
         }
       }
     },
     "rootView": {
-      "viewName": "br.com.northwind.fioriappnorthwind.view.App",
+      "viewName": "br.com.northwind.fioriappnorthwind.view.Produtos",
       "type": "XML",
-      "id": "App",
+      "id": "Produtos",
       "async": true
     }
   },
