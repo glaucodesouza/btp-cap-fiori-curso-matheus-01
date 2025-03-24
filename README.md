@@ -1,5 +1,5 @@
 ## Application Details
-- Using service Northwind;
+- Using service Northwind: https://services.odata.org/northwind/northwind.svc/$metadata
 - View Produtos1, loads data using read method in Controller;
 - View Produtos2, loads data automatically in Table in View;
 - We used an example of Table from here:
