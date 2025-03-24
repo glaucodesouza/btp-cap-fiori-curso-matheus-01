@@ -53,7 +53,8 @@
                             inset="false"
                             items="{Products>/}"
                             class="sapFSemanticPageAlignContent"
-                            width="auto">
+                            width="auto"
+                            >
 
                             <columns>
                                 <Column id="_IDGenColumn">

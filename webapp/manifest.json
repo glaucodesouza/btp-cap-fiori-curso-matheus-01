@@ -109,9 +109,9 @@
       }
     },
     "rootView": {
-      "viewName": "br.com.northwind.fioriappnorthwind.view.Produtos",
+      "viewName": "br.com.northwind.fioriappnorthwind.view.App",
       "type": "XML",
-      "id": "Produtos",
+      "id": "app",
       "async": true
     }
   },
