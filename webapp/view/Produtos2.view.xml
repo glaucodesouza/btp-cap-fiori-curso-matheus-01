@@ -21,6 +21,7 @@
 
                     <!-- Content -->
                     <semantic:content>
+                    <!-- https://services.odata.org/northwind/northwind.svc/$metadata -->
                         <Table
                             id="idProductsTable2"
                             inset="false"
