@@ -73,7 +73,7 @@
                                     <cells>
                                         <Text id="_IDGenText4" text="{Products>Name}"/>
                                         <Text id="_IDGenText42" text="{Products>Description}"/>
-                                        <Text id="_IDGenText5" text="{Products>Price}"/>
+                                        <Text id="_IDGenText5" text="{path: 'Products>Price', formatter: '.format'}"/>
                                     </cells>
                                 </ColumnListItem>
                             </items>
