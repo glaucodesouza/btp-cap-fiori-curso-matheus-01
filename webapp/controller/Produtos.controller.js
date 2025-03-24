@@ -7,6 +7,12 @@ sap.ui.define([
         onInit() {
             let oConfiguration = sap.ui.getCore().getConfiguration();
             oConfiguration.setLanguage("PT");
+
+            this.onLoad('');
+        },
+
+        onLoad: function (value) {
+            
         }
     });
 });

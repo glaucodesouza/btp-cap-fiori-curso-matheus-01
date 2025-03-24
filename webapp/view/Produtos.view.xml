@@ -1,7 +1,181 @@
-<mvc:View controllerName="br.com.northwind.fioriappnorthwind.controller.Produtos" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+<mvc:View controllerName="br.com.northwind.fioriappnorthwind.controller.Produtos" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:semantic="sap.f.semantic">
     <Shell id="shell">
         <Page id="page" title="{i18n>title}">
-            <Label id="label" text="{i18n>title}"></Label>
+            <semantic:SemanticPage
+                    id="mySemanticPage"
+                    headerPinnable="true"
+                    toggleHeaderOnTitleClick="true"
+                    preserveHeaderStateOnScroll="false"
+                    titleAreaShrinkRatio="1:1.6:1.6"
+                    showFooter="true">
+
+                    <!-- Title Heading-->
+                    <semantic:titleHeading>
+                        <Title id="_IDGenTitle" text="{i18n>title}" />
+                    </semantic:titleHeading>
+
+                    <!-- Title Breadcrumbs-->
+                    <!-- <semantic:titleBreadcrumbs>
+                        <Breadcrumbs id="_IDGenBreadcrumbs1">
+                            <Link id="_IDGenLink" text="Home" />
+                            <Link id="_IDGenLink1" text="Page 1" />
+                            <Link id="_IDGenLink2" text="Page 2" />
+                            <Link id="_IDGenLink3" text="Page 3" />
+                            <Link id="_IDGenLink4" text="Page 4" />
+                            <Link id="_IDGenLink5" text="Page 5" />
+                        </Breadcrumbs>
+                    </semantic:titleBreadcrumbs> -->
+
+                    <!-- Title Snapped On Mobile Content-->
+                    <!-- <semantic:titleSnappedOnMobile>
+                        <Title id="_IDGenTitle1" text="Teste"/>
+                    </semantic:titleSnappedOnMobile> -->
+
+                    <!-- Title Content-->
+                    <!-- <semantic:titleContent>
+                        <Image id="_IDGenImage" src="./test-resources/sap/f/images/KPI.png" tooltip="This is just a placeholder, not a real KPI control." height="2rem" width="3.5rem"/>
+                    </semantic:titleContent> -->
+
+                    <!-- TitleExpanded content-->
+                    <!-- <semantic:titleSnappedContent>
+                        <Text id="_IDGenText" text="Teste"/>
+                    </semantic:titleSnappedContent> -->
+
+                    <!-- Header Content -->
+                    <semantic:headerContent>
+                        <Input id="search" liveChange="onSearch" placeholder="Buscar" width="30%"></Input>
+                    </semantic:headerContent>
+
+                    <!-- Content -->
+                    <semantic:content>
+                        <Table
+                            id="idProductsTable"
+                            inset="false"
+                            items="{Products>/}"
+                            class="sapFSemanticPageAlignContent"
+                            width="auto">
+
+                            <columns>
+                                <Column id="_IDGenColumn">
+                                    <Text id="_IDGenText1" text="{i18n>tblName}"/>
+                                </Column>
+                                <Column id="_IDGenColumn1" minScreenWidth="Tablet" demandPopin="true">
+                                    <Text id="_IDGenText2" text="{i18n>tblDescription}"/>
+                                </Column>
+                                <Column id="_IDGenColumn2" minScreenWidth="Tablet" demandPopin="true">
+                                    <Text id="_IDGenText3" text="{i18n>tblPrice}"/>
+                                </Column>
+                            </columns>
+
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem" vAlign="Middle">
+                                    <cells>
+                                        <Text id="_IDGenText4" text="{Products>Name}"/>
+                                        <Text id="_IDGenText42" text="{Products>Description}"/>
+                                        <Text id="_IDGenText5" text="{Products>Price}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </semantic:content>
+
+                    <semantic:titleMainAction>
+                        <semantic:TitleMainAction id="_IDGenTitleMainAction" text="Edit"/>
+                    </semantic:titleMainAction>
+
+                    <!-- <semantic:addAction>
+                        <semantic:AddAction id="_IDGenAddAction" />
+                    </semantic:addAction>
+
+                    <semantic:deleteAction>
+                        <semantic:DeleteAction id="_IDGenDeleteAction" />
+                    </semantic:deleteAction>
+
+                    <semantic:copyAction>
+                        <semantic:CopyAction id="_IDGenCopyAction" />
+                    </semantic:copyAction>
+
+                    <semantic:editAction>
+                        <semantic:EditAction id="_IDGenEditAction" />
+                    </semantic:editAction>
+
+                    <semantic:favoriteAction>
+                        <semantic:FavoriteAction id="_IDGenFavoriteAction" />
+                    </semantic:favoriteAction>
+
+                    <semantic:flagAction>
+                        <semantic:FlagAction id="_IDGenFlagAction" />
+                    </semantic:flagAction>
+
+                    <semantic:closeAction>
+                        <semantic:CloseAction id="_IDGenCloseAction" />
+                    </semantic:closeAction>
+
+                    <semantic:fullScreenAction>
+                        <semantic:FullScreenAction id="_IDGenFullScreenAction" visible="{/notMobile}"/>
+                    </semantic:fullScreenAction>
+
+                    <semantic:exitFullScreenAction>
+                        <semantic:ExitFullScreenAction id="_IDGenExitFullScreenAction" visible="{/notMobile}"/>
+                    </semantic:exitFullScreenAction> -->
+
+                    <!-- Custom Title Text Content-->
+                    <!-- <semantic:titleCustomTextActions>
+                        <Button id="_IDGenButton" text="ToggleFooter" press="showFooter"/>
+                    </semantic:titleCustomTextActions> -->
+
+                    <!-- Custom Title Icon Content-->
+                    <!-- <semantic:titleCustomIconActions>
+                        <OverflowToolbarButton id="_IDGenOverflowToolbarButton" icon="sap-icon://cart" text="cart" />
+                    </semantic:titleCustomIconActions> -->
+
+                    <!--Semantic ShareMenu Buttons-->
+                    <!-- <semantic:discussInJamAction>
+                        <semantic:DiscussInJamAction id="_IDGenDiscussInJamAction" />
+                    </semantic:discussInJamAction> -->
+
+                    <!-- <semantic:shareInJamAction>
+                        <semantic:ShareInJamAction id="_IDGenShareInJamAction" />
+                    </semantic:shareInJamAction> -->
+
+                    <!-- <semantic:printAction>
+                        <semantic:PrintAction id="_IDGenPrintAction" />
+                    </semantic:printAction> -->
+
+                    <!-- <semantic:sendEmailAction>
+                        <semantic:SendEmailAction id="_IDGenSendEmailAction" />
+                    </semantic:sendEmailAction> -->
+
+                    <!-- <semantic:sendMessageAction>
+                        <semantic:SendMessageAction id="_IDGenSendMessageAction" />
+                    </semantic:sendMessageAction> -->
+
+                    <!-- Custom Share Actions -->
+                    <!-- <semantic:customShareActions>
+                        <Button id="_IDGenButton1" icon= "sap-icon://bed" text="Bed" />
+                        <Button id="_IDGenButton2" icon= "sap-icon://flight" text="Flight" />
+                    </semantic:customShareActions> -->
+
+                    <!-- Semantic Footer Buttons -->
+                    <!-- <semantic:positiveAction>
+                        <semantic:PositiveAction id="_IDGenPositiveAction" />
+                    </semantic:positiveAction>
+
+                    <semantic:negativeAction>
+                        <semantic:NegativeAction id="_IDGenNegativeAction" />
+                    </semantic:negativeAction> -->
+
+                    <!-- <semantic:messagesIndicator>
+                        <semantic:MessagesIndicator id="_IDGenMessagesIndicator" press="onMessagesButtonPress"/>
+                    </semantic:messagesIndicator> -->
+
+                    <!-- Custom Footer Content-->
+                    <semantic:footerCustomActions>
+                        <Button id="_IDGenButton3" text="Update" />
+                        <Button id="_IDGenButton4" text="Delete" />
+                    </semantic:footerCustomActions>
+
+                </semantic:SemanticPage>
         </Page>
     </Shell>
 </mvc:View>
