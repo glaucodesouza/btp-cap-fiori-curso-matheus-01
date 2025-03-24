@@ -6,14 +6,14 @@ sap.ui.define([
 ], (Controller, JSONModel, Filter, FilterOperator) => {
     "use strict";
 
-    return Controller.extend("br.com.northwind.fioriappnorthwind.controller.Produtos", {
+    return Controller.extend("br.com.northwind.fioriappnorthwind.controller.Produtos2", {
         onInit() {
             let oConfiguration = sap.ui.getCore().getConfiguration();
             oConfiguration.setLanguage("PT");
 
             // MODO antigo, não fazer assim
             // A FORMA correta de ler dados é vista na VIEW Produtos2.
-            this.onLoad('');
+            // this.onLoad('');
         },
 
         onLoad: function (value) {
@@ -82,6 +82,20 @@ sap.ui.define([
         onSearch: function(oEvent){
             this.onLoad(oEvent.getSource().getValue());
             
+        },
+
+        onSearch2: function(oEvent){
+            let sValue = oEvent.getSource().getValue();
+        
+            let oFilter = new Filter({
+                filters: [
+                    new Filter("Name", FilterOperator.Contains, sValue)
+                ],
+                and: false
+            });
+            debugger;
+            this.getView().byId("idProductsTable2").getBinding("items").filter(oFilter);
         }
+
     });
 });

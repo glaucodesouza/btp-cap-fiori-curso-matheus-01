@@ -1,0 +1,71 @@
+<mvc:View controllerName="br.com.northwind.fioriappnorthwind.controller.Produtos2" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:semantic="sap.f.semantic">
+    <!-- <Shell id="shell"> -->
+        <Page id="page2" title="{i18n>title}">
+            <semantic:SemanticPage
+                    id="mySemanticPage2"
+                    headerPinnable="true"
+                    toggleHeaderOnTitleClick="true"
+                    preserveHeaderStateOnScroll="false"
+                    titleAreaShrinkRatio="1:1.6:1.6"
+                    showFooter="true">
+
+                    <!-- Title Heading-->
+                    <semantic:titleHeading>
+                        <Title id="_IDGenTitle2" text="view Produtos2" />
+                    </semantic:titleHeading>
+
+                    <!-- Header Content -->
+                    <semantic:headerContent>
+                        <Input id="search2" liveChange="onSearch2" placeholder="Buscar" width="30%"></Input>
+                    </semantic:headerContent>
+
+                    <!-- Content -->
+                    <semantic:content>
+                        <Table
+                            id="idProductsTable2"
+                            inset="false"
+                            items="{path: '/Products', length: 3}"
+                            class="sapFSemanticPageAlignContent"
+                            width="auto"
+                            growing="true"
+                            growingThreshold="3"
+                            >
+
+                            <columns>
+                                <Column id="_IDGenColumn21">
+                                    <Text id="_IDGenText12" text="{i18n>tblName}"/>
+                                </Column>
+                                <Column id="_IDGenColumn12" minScreenWidth="Tablet" demandPopin="true">
+                                    <Text id="_IDGenText22" text="{i18n>tblDescription}"/>
+                                </Column>
+                                <Column id="_IDGenColumn22" minScreenWidth="Tablet" demandPopin="true">
+                                    <Text id="_IDGenText32" text="{i18n>tblPrice}"/>
+                                </Column>
+                            </columns>
+
+                            <items>
+                                <ColumnListItem id="_IDGenColumnListItem2" vAlign="Middle">
+                                    <cells>
+                                        <Text id="_IDGenText421" text="{Name}"/>
+                                        <Text id="_IDGenText422" text="{Description}"/>
+                                        <Text id="_IDGenText52" text="{path: 'Price', formatter: '.format'}"/>
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </semantic:content>
+
+                    <semantic:titleMainAction>
+                        <semantic:TitleMainAction id="_IDGenTitleMainAction2" text="Edit"/>
+                    </semantic:titleMainAction>
+
+                    <!-- Custom Footer Content-->
+                    <semantic:footerCustomActions>
+                        <Button id="_IDGenButton32" text="Update" />
+                        <Button id="_IDGenButton42" text="Delete" />
+                    </semantic:footerCustomActions>
+
+                </semantic:SemanticPage>
+        </Page>
+    <!-- </Shell> -->
+</mvc:View>
